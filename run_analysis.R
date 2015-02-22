@@ -50,11 +50,9 @@ names(mergedData) <- gsub("-", "", names(mergedData))
 #
 activities <- read.table("./activity_labels.txt")
 #
-# clean up fully capitalized names, remove underscores, recapitalize second half as standard R naming
+# clean up fully capitalized names, remove underscores
 #
 activities[, 2] <- tolower(gsub("_", "", activities[, 2]))
-substr(activities[2, 2], 8, 8) <- toupper(substr(activities[2, 2], 8, 8))
-substr(activities[3, 2], 8, 8) <- toupper(substr(activities[3, 2], 8, 8))
 #
 activitiesLabels <- activities[mergedLabels[, 1], 2]
 mergedLabels[, 1] <- activitiesLabels

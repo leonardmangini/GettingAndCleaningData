@@ -44,8 +44,8 @@ It stores the result back in mergedData, mergedLabels, and mergedSubjects
 The script then cleans up variable names in the mergedData dataset.
 It uses the names and gsub commands to remove parenthesis and dashes and fix capitalization
 
-The script then cleans up the activities in mergedLabels with tolower, toupper and gsub commands.
-It removes underscores and take 'ALLCAPS' formats to capitalized first letters of the second half of the name
+The script then cleans up the activities in mergedLabels with tolower and gsub commands.
+It removes underscores and lowercases the 'ALLCAPS' formats.
 It saves these back into mergedLabels
 
 It then cleans up the subject names and uses cbind to append mergedSubjects, mergedLabels, mergedData in that order
